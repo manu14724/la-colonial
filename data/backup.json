@@ -1,0 +1,514 @@
+{
+    "agua": [
+        {
+            "id": "1",
+            "component": "Button",
+            "label": "Agua Chica",
+            "props": {
+                "text": "Chica",
+                "price": 10,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "2",
+            "component": "Button",
+            "label": "Agua Grande",
+            "props": {
+                "text": "Grande",
+                "price": 15,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "3",
+            "component": "Button",
+            "label": "Canasta o Varquillo",
+            "props": {
+                "text": "Canasta o Varquillo",
+                "price": 2,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "4",
+            "component": "Button",
+            "label": "Extra",
+            "props": {
+                "text": "Extra",
+                "price": 3,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "italiana": [
+        {
+            "id": "5",
+            "component": "Button",
+            "label": "Italiana Chica",
+            "props": {
+                "text": "Chica",
+                "price": 14,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "6",
+            "component": "Button",
+            "label": "Italiana Mediana",
+            "props": {
+                "text": "Mediana",
+                "price": 19,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "7",
+            "component": "Button",
+            "label": "Italiana Grande",
+            "props": {
+                "text": "Grande",
+                "price": 28,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "paletas": [
+        {
+            "id": "8",
+            "component": "Button",
+            "label": "Paleta Chica",
+            "props": {
+                "text": "Chica",
+                "price": 6,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "9",
+            "component": "Button",
+            "label": "Paleta Mediana",
+            "props": {
+                "text": "Mediana",
+                "price": 11,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "10",
+            "component": "Button",
+            "label": "Paleta Grande",
+            "props": {
+                "text": "Grande",
+                "price": 18,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "chasca": [
+        {
+            "id": "11",
+            "component": "Button",
+            "label": "Chasca Chica",
+            "props": {
+                "text": "Chica",
+                "price": 16,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "12",
+            "component": "Button",
+            "label": "Chasca Grande",
+            "props": {
+                "text": "Grande",
+                "price": 28,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "13",
+            "component": "Button",
+            "label": "Bar. Extra",
+            "props": {
+                "text": "Bar. Extra",
+                "price": 10,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "14",
+            "component": "Button",
+            "label": "Chasca Mediana",
+            "props": {
+                "text": "Mediana",
+                "price": 22,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "15",
+            "component": "Button",
+            "label": "Chasca 1/2 litro",
+            "props": {
+                "text": "1/2 Litro",
+                "price": 5,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "frappuccino": [
+        {
+            "id": "16",
+            "component": "Button",
+            "label": "Frappuccino Chico",
+            "props": {
+                "text": "Frappuccino Chico",
+                "price": 25,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "17",
+            "component": "Button",
+            "label": "Frappuccino Grande",
+            "props": {
+                "text": "Frappuccino Grande",
+                "price": 30,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "helados": [
+        {
+            "id": "18",
+            "component": "Button",
+            "label": "Vaso Choco",
+            "props": {
+                "text": "Vaso Choco",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "19",
+            "component": "Button",
+            "label": "Helado Sencillo",
+            "props": {
+                "text": "Sencillo",
+                "price": 16,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "20",
+            "component": "Button",
+            "label": "Helado Bola Extra",
+            "props": {
+                "text": "Bola Extra",
+                "price": 12,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "21",
+            "component": "Button",
+            "label": "Importe",
+            "props": {
+                "text": "Importe",
+                "price": 30,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "22",
+            "component": "Button",
+            "label": "Helado Doble",
+            "props": {
+                "text": "Doble",
+                "price": 22,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "23",
+            "component": "Button",
+            "label": "Helado 1/2 litro",
+            "props": {
+                "text": "1/2 Litro",
+                "price": 29,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "24",
+            "component": "Button",
+            "label": "Helado 1 litro",
+            "props": {
+                "text": "1 Litro",
+                "price": 58,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "25",
+            "component": "Button",
+            "label": "Helado Triple",
+            "props": {
+                "text": "Triple",
+                "price": 28,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "26",
+            "component": "Button",
+            "label": "Helado 5 Litros",
+            "props": {
+                "text": "5 Litros",
+                "price": 150,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "fresas": [
+        {
+            "id": "27",
+            "component": "Button",
+            "label": "Fresas",
+            "props": {
+                "text": "Fresas",
+                "price": 21,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "28",
+            "component": "Button",
+            "label": "Fresas con 1 Helado",
+            "props": {
+                "text": "Fresas con 1 helado",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "29",
+            "component": "Button",
+            "label": "Fresa con 2 helados",
+            "props": {
+                "text": "Fresas con 2 holados",
+                "price": 33,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "especiales": [
+        {
+            "id": "30",
+            "component": "Button",
+            "label": "Bolis",
+            "props": {
+                "text": "Bolis",
+                "price": 6,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "31",
+            "component": "Button",
+            "label": "Esquimal Chico",
+            "props": {
+                "text": "Esquimal Chico",
+                "price": 11,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "32",
+            "component": "Button",
+            "label": "Paleta Chamoy",
+            "props": {
+                "text": "Paleta Chamoy",
+                "price": 11,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "33",
+            "component": "Button",
+            "label": "Chemisse",
+            "props": {
+                "text": "Chemisse",
+                "price": 11,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "34",
+            "component": "Button",
+            "label": "Chocolato",
+            "props": {
+                "text": "Chocotaco",
+                "price": 18,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "35",
+            "component": "Button",
+            "label": "Sanduich",
+            "props": {
+                "text": "Sanduich",
+                "price": 11,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "36",
+            "component": "Button",
+            "label": "Extra Chantilly",
+            "props": {
+                "text": "Extra Chantilly",
+                "price": 10,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ],
+    "others": [
+        {
+            "id": "37",
+            "component": "Button",
+            "label": "Nachos",
+            "props": {
+                "text": "Nachos",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "38",
+            "component": "Button",
+            "label": "Agua Natural Chica",
+            "props": {
+                "text": "Agua Nat. Chica",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },{
+            "id": "39",
+            "component": "Button",
+            "label": "Papas",
+            "props": {
+                "text": "Papas",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "40",
+            "component": "Button",
+            "label": "Nachos Extra Queso",
+            "props": {
+                "text": "Nachos Ext. Queso",
+                "price": 30,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "41",
+            "component": "Button",
+            "label": "Agua Natural Mediana",
+            "props": {
+                "text": "Agua Nat. Med",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "42",
+            "component": "Button",
+            "label": "Cueritos",
+            "props": {
+                "text": "Cueritos",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "43",
+            "component": "Button",
+            "label": "Palomitas",
+            "props": {
+                "text": "Palomitas",
+                "price": 12,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "44",
+            "component": "Button",
+            "label": "Agua Natural Grande",
+            "props": {
+                "text": "Agua Nat. Gde",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        },
+        {
+            "id": "45",
+            "component": "Button",
+            "label": "Papas/Queso",
+            "props": {
+                "text": "Papas/Queso",
+                "price": 20,
+                "disabled": false,
+                "variant": "contained"
+            }
+        }
+    ]
+}

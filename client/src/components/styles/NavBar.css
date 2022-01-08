@@ -1,0 +1,15 @@
+.nav-bar-wrapper {
+  background: #1769aa;
+  padding: 5px;
+}
+
+ul#menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+ul#menu li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
