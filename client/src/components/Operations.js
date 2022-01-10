@@ -4,8 +4,10 @@ import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 import { Item } from '../components/Item';
+import Example from "./Example";
 
 import "./styles/Operations.css";
+import "./styles/print.css";
 
 export const Operations = ({ turno, pay, setTurno, stack, handleRemoveStack, cleanNote, total, cash, handlePayment, cleanCash }) => {
 	const handleSubmit = async () => {
@@ -25,21 +27,21 @@ export const Operations = ({ turno, pay, setTurno, stack, handleRemoveStack, cle
 				{/** Header */}
 				<Button onClick={handleSubmit} style={{ marginRight: 10 }} variant={"outlined"}>Iniciar Turno</Button>
 				<Button style={{ marginRight: 10 }} variant={"outlined"}>Sin Turno</Button>
-				<Chip style={{ marginRight: 10 }} label={`Turno No. ${turno}`} />
+				<Chip style={{ marginRight: 10, fontWeight: "bolder" }} label={`Turno No. ${turno}`} />
 				<Divider style={{ margin: "5px 0" }} />
 
 				{/** Body */}
 				<div style={{ minHeight: "200px" }}>
 					{stack?.map((item) => (
-					<Chip key={item.id} style={{ margin: "5px" }} label={item.label} variant="outlined" onDelete={() => handleRemoveStack(item)} />
+					<Chip key={item.id} style={{ margin: "5px", fontWeight: "bolder" }} label={item.label} variant="outlined" onDelete={() => handleRemoveStack(item)} />
 				))}
 				</div>
 				<Divider style={{ margin: "5px 0" }} />
 
 				{/** Footer */}
 				<Button style={{ marginRight: 10 }} onClick={() => cleanNote()} variant={"outlined"}>Limpiar Nota</Button>
-				<Chip style={{ marginRight: 10 }} label={`No. Artículos ${stack?.length || 0}`} />
-				<Chip style={{ marginRight: 10 }} label={`Total a pagar $${total || 0}`} />
+				<Chip style={{ marginRight: 10, fontWeight: "bolder" }} label={`No. Artículos ${stack?.length || 0}`} />
+				<Chip style={{ marginRight: 10, fontWeight: "bolder" }} label={`Total a pagar $${total || 0}`} />
 
 				<Divider style={{ margin: "5px 0" }} />
 
@@ -83,7 +85,7 @@ export const Operations = ({ turno, pay, setTurno, stack, handleRemoveStack, cle
 
 				<Button onClick={() => pay()} style={{ marginRight: 10 }} variant={"contained"}>Pagar</Button>
 				<Button onClick={() => cleanCash()} style={{ marginRight: 10 }} variant={"outlined"}>Limpiar Cantidad</Button>
-
+				<Example stack={stack} cash={cash} total={total}  />
 			</Item>
 		</div>
 	);
