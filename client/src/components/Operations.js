@@ -33,7 +33,7 @@ export const Operations = ({ turno, pay, setTurno, stack, handleRemoveStack, cle
 				{/** Body */}
 				<div style={{ minHeight: "200px" }}>
 					{stack?.map((item) => (
-					<Chip key={item.id} style={{ margin: "5px", fontWeight: "bolder" }} label={item.label} variant="outlined" onDelete={() => handleRemoveStack(item)} />
+						<Chip key={item.id} style={{ margin: "5px", fontWeight: "bolder" }} label={<><span style={{ marginRight: 10 }}>{item.label}</span><input style={{ width: 50 }} type="number" onChange={() => console.log("changing")} value={0} /></>} variant="outlined" onDelete={() => handleRemoveStack(item)} />
 				))}
 				</div>
 				<Divider style={{ margin: "5px 0" }} />
