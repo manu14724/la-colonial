@@ -1,6 +1,5 @@
 import React from "react";
 import ReactToPrint from "react-to-print";
-import Link from '@mui/material/Link';
 
 class ComponentToPrint extends React.Component {
 
@@ -33,15 +32,12 @@ class Example extends React.Component {
       <div style={{ display: "inline-block" }}>    
         <ReactToPrint
           trigger={() => !!this.props.cash ? (
-            <Link
-              component="button"
+            <a
               href="#"
-              disabled={!!this.props.cash}
-              variant="link"
               style={{ fontSize: 35 }}
             >
               Pagar
-            </Link>
+            </a>
           ) : <span>Ingrese Pago</span>}
           onAfterPrint={() => this.props.pay()}
           content={() => this.componentRef}
