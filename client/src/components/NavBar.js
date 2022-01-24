@@ -11,10 +11,10 @@ export const NavBar = () => {
               <Link to={"/"}>Ventas</Link>
             </li>
             <li>
-              <Link to={"/reportes"}>Reportes</Link>
+              <Link to={"/reportes"}></Link>
             </li>
             <li>
-              <Link to={"/precios"}>Precios</Link>
+              <Link to={"/precios"}></Link>
             </li>
           </ul>
         </nav>
