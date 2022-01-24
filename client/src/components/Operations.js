@@ -33,6 +33,14 @@ export const Operations = ({
 		setTurno(1);
 	};
 
+	const getCantidad = () => {
+		let cantidad = 0;
+		stack.forEach(element => {
+			cantidad += element.cantidad
+		});
+		return cantidad;
+	}
+
 	return (
 		<div>
 			<Item>
@@ -45,14 +53,14 @@ export const Operations = ({
 				{/** Body */}
 				<div style={{ minHeight: "200px" }}>
 					{stack?.map((item) => (
-						<Chip key={item.id} style={{ margin: "5px", fontWeight: "bolder" }} label={<><span style={{ marginRight: 10 }}>{item.label}</span><input style={{ width: 50 }} type="number" onChange={() => updateCantidad(item)} value={item.cantidad} /></>} variant="outlined" onDelete={() => handleRemoveStack(item)} />
+						<Chip key={item.id} style={{ margin: "5px", fontWeight: "bolder" }} label={<><span style={{ marginRight: 10 }}>{item.label}</span><input disabled style={{ width: 50 }} type="number" onChange={() => updateCantidad(item)} value={item.cantidad} /></>} variant="outlined" onDelete={() => handleRemoveStack(item)} />
 				))}
 				</div>
 				<Divider style={{ margin: "5px 0" }} />
 
 				{/** Footer */}
 				<Button style={{ marginRight: 10 }} onClick={() => cleanNote()} variant={"outlined"}>Limpiar Nota</Button>
-				<Chip style={{ marginRight: 10, fontWeight: "bolder" }} label={`No. Artículos ${stack?.length || 0}`} />
+				<Chip style={{ marginRight: 10, fontWeight: "bolder" }} label={`No. Artículos ${getCantidad() || 0}`} />
 				<Chip style={{ marginRight: 10, fontWeight: "bolder" }} label={`Total a pagar $${total || 0}`} />
 
 				<Divider style={{ margin: "5px 0" }} />
@@ -97,7 +105,7 @@ export const Operations = ({
 
 				<Button onClick={() => pay()} style={{ marginRight: 10 }} variant={"contained"}>Pagar</Button>
 				<Button onClick={() => cleanCash()} style={{ marginRight: 10 }} variant={"outlined"}>Limpiar Cantidad</Button>
-				<Example stack={stack} cash={cash} total={total}  />
+				<Example pay={pay} stack={stack} cash={cash} total={total}  />
 			</Item>
 		</div>
 	);

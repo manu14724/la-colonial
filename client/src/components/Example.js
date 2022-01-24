@@ -5,6 +5,7 @@ class ComponentToPrint extends React.Component {
 
   componentDidUpdate() {
     console.log(this.props.props);
+    // this.props.props.pay();
   }
 
   render() {
@@ -13,12 +14,11 @@ class ComponentToPrint extends React.Component {
         <h1>La Colonial</h1>
         {this.props.props.stack.map(item => (
           <div key={item.uuid}>
-            <span>{item.label}</span>
-            <span>${item.props.price}</span>
+            <h2>{item.cantidad + " - " + item.label + " $" + (item.props.price * item.cantidad)}</h2>
           </div>
         ))}
         <h3>Su pago: ${this.props.props.cash}</h3>
-        <h3>Su compra: ${this.props.props.total}</h3>
+        <h3>Total de su compra: ${this.props.props.total}</h3>
         <h3>Su cambio: ${this.props.props.cash - this.props.props.total}</h3>
       </div>
     )
