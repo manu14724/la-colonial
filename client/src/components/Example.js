@@ -1,5 +1,6 @@
 import React from "react";
 import ReactToPrint from "react-to-print";
+import Divider from "@mui/material/Divider";
 
 class ComponentToPrint extends React.Component {
 
@@ -15,12 +16,15 @@ class ComponentToPrint extends React.Component {
         <center><h1>La Colonial</h1></center>
         {this.props.props.stack.map(item => (
           <div key={item.uuid}>
-            <h4>{item.cantidad + " - " + item.label + " $" + (item.props.price * item.cantidad)}</h4>
+            <h4 style={{ margin: 0 }}>{item.cantidad + " - " + item.label + " $" + (item.props.price * item.cantidad)}</h4>
           </div>
         ))}
-        <h3>Su pago: ${this.props.props.cash}</h3>
-        <h3>Total de su compra: ${this.props.props.total}</h3>
-        <h3>Su cambio: ${this.props.props.cash - this.props.props.total}</h3>
+        <Divider style={{ margin: "5px 0" }} />
+        <h4>Su pago: ${this.props.props.cash}</h4>
+        <h4>Total de su compra: ${this.props.props.total}</h4>
+        <h4>Su cambio: ${this.props.props.cash - this.props.props.total}</h4>
+        <Divider style={{ margin: "5px 0" }} />
+        <h3>Gracias por su preferencia :)</h3>
       </div>
     )
   };
