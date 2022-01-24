@@ -12,7 +12,7 @@ import "./styles/Ventas.css";
 export const Ventas = () => {
   const [dta, setData] = useState({});
   const [stack, setStack] = useState([]);
-  const [turno, setTurno] = useState(0);
+  const [turno, setTurno] = useState(1);
   const [total, setTotal] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [cash, setCash] = useState(0);
@@ -23,7 +23,7 @@ export const Ventas = () => {
     const respTurno = await fetch('/api/turno');
     const body = await response.json();
     const bodyTurno = await respTurno.json();
-    setTurno(bodyTurno?.turno);
+    setTurno(bodyTurno?.turno || 1);
     setIsLoading(false);
     if (response.status !== 200) throw Error(body.message);
 
@@ -54,10 +54,25 @@ export const Ventas = () => {
       .catch(err => console.log(err));
   }, []);
 
+  const updateCantidad = (item) => {
+    const temStack = stack;
+    stack.forEach(i => {
+      if (i.id === item.id) {
+        i.cantidad = parseInt(item.cantidad) + 1
+      }
+    })
+    setStack([
+      ...stack,
+    ])
+    const totalPrice = total + item.props.price;
+    setTotal(totalPrice);
+  }
+
   const handleClick = (item) => {
-    const newItem = {
+      const newItem = {
       ...item,
       uuid: uuidv4(),
+      cantidad: 1,
     };
     setStack([
       ...stack,
@@ -112,6 +127,7 @@ export const Ventas = () => {
             setTurno={setTurno}
             pay={pay}
             handleRemoveStack={handleRemoveStack}
+            updateCantidad={updateCantidad}
             total={total} />
         </Grid>
       </Grid>

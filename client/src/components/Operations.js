@@ -9,7 +9,19 @@ import Example from "./Example";
 import "./styles/Operations.css";
 import "./styles/print.css";
 
-export const Operations = ({ turno, pay, setTurno, stack, handleRemoveStack, cleanNote, total, cash, handlePayment, cleanCash }) => {
+export const Operations = ({
+	turno,
+	pay,
+	setTurno,
+	stack,
+	handleRemoveStack,
+	cleanNote,
+	total,
+	cash,
+	handlePayment,
+	cleanCash,
+	updateCantidad
+}) => {
 	const handleSubmit = async () => {
 		const response = await fetch('/api/world', {
 			method: 'POST',
@@ -18,7 +30,7 @@ export const Operations = ({ turno, pay, setTurno, stack, handleRemoveStack, cle
 			},
 			body: null,
 		});
-		setTurno(0);
+		setTurno(1);
 	};
 
 	return (
@@ -33,7 +45,7 @@ export const Operations = ({ turno, pay, setTurno, stack, handleRemoveStack, cle
 				{/** Body */}
 				<div style={{ minHeight: "200px" }}>
 					{stack?.map((item) => (
-						<Chip key={item.id} style={{ margin: "5px", fontWeight: "bolder" }} label={<><span style={{ marginRight: 10 }}>{item.label}</span><input style={{ width: 50 }} type="number" onChange={() => console.log("changing")} value={0} /></>} variant="outlined" onDelete={() => handleRemoveStack(item)} />
+						<Chip key={item.id} style={{ margin: "5px", fontWeight: "bolder" }} label={<><span style={{ marginRight: 10 }}>{item.label}</span><input style={{ width: 50 }} type="number" onChange={() => updateCantidad(item)} value={item.cantidad} /></>} variant="outlined" onDelete={() => handleRemoveStack(item)} />
 				))}
 				</div>
 				<Divider style={{ margin: "5px 0" }} />
