@@ -42,7 +42,7 @@ class Example extends React.Component {
             >
               Pagar
             </Link>
-          ) : <span>Ingrese Cantidad</span>}
+          ) : <span>Ingrese Pago</span>}
           onAfterPrint={() => this.props.pay()}
           content={() => this.componentRef}
         />
