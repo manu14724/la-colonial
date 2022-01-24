@@ -32,16 +32,17 @@ class Example extends React.Component {
     return (
       <div style={{ display: "inline-block" }}>    
         <ReactToPrint
-          trigger={() => (
+          trigger={() => !!this.props.cash ? (
             <Link
               component="button"
               href="#"
+              disabled={!!this.props.cash}
               variant="link"
               style={{ fontSize: 35 }}
             >
               Pagar
             </Link>
-          )}
+          ) : <span>Ingrese Cantidad</span>}
           onAfterPrint={() => this.props.pay()}
           content={() => this.componentRef}
         />
