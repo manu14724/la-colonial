@@ -69,17 +69,23 @@ export const Ventas = () => {
   }
 
   const handleClick = (item) => {
+    const result = stack.filter(i => i.id === item.id);
+    console.log("RESULT: ", result);
+    if (result?.length) {
+      updateCantidad(result[0]);
+    } else {
       const newItem = {
       ...item,
       uuid: uuidv4(),
       cantidad: 1,
-    };
-    setStack([
-      ...stack,
-      newItem,
-    ]);
-    const totalPrice = total + item.props.price;
-    setTotal(totalPrice);
+      };
+      setStack([
+        ...stack,
+        newItem,
+      ]);
+      const totalPrice = total + item.props.price;
+      setTotal(totalPrice);
+    }
   }
 
   const handleRemoveStack = (item) => {
@@ -89,7 +95,7 @@ export const Ventas = () => {
         temp.push(stack[i]);
       }
     }
-    setTotal(total - item.props.price);
+    setTotal(total - (item.props.price * item.cantidad));
     setStack(temp);
   }
 
