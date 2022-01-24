@@ -102,10 +102,8 @@ export const Operations = ({
 				/>
 
 				<Divider style={{ margin: "5px 0" }} />
-
-				<Button onClick={() => pay()} style={{ marginRight: 10 }} variant={"contained"}>Pagar</Button>
-				<Button onClick={() => cleanCash()} style={{ marginRight: 10 }} variant={"outlined"}>Limpiar Cantidad</Button>
 				<Example pay={pay} stack={stack} cash={cash} total={total}  />
+				<Button onClick={() => cleanCash()} style={{ margin: 20 }} variant={"outlined"}>Limpiar Cantidad</Button>
 			</Item>
 		</div>
 	);

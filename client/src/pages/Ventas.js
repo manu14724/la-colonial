@@ -45,7 +45,10 @@ export const Ventas = () => {
 			},
 			body: JSON.stringify({ turno: turno + 1 }),
 		});
-		setTurno(turno + 1);
+    setTurno(turno + 1);
+    setStack([]);
+    setTotal(0);
+    setCash(0);
   }
 
   useEffect(() => {

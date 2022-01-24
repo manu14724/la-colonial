@@ -1,12 +1,14 @@
 import React from "react";
 import ReactToPrint from "react-to-print";
+import Link from '@mui/material/Link';
 
 class ComponentToPrint extends React.Component {
 
-  componentDidUpdate() {
+  componentDidMount() {
     console.log(this.props.props);
     // this.props.props.pay();
   }
+  
 
   render() {
     return (
@@ -28,9 +30,19 @@ class ComponentToPrint extends React.Component {
 class Example extends React.Component {
   render() {
     return (
-      <div>
+      <div style={{ display: "inline-block" }}>    
         <ReactToPrint
-          trigger={() => <a href="#">Pagar</a>}
+          trigger={() => (
+            <Link
+              component="button"
+              href="#"
+              variant="link"
+              style={{ fontSize: 35 }}
+            >
+              Pagar
+            </Link>
+          )}
+          onAfterPrint={() => this.props.pay()}
           content={() => this.componentRef}
         />
         <ComponentToPrint props={this.props} ref={el => (this.componentRef = el)} />
