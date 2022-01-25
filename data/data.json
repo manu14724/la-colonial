@@ -695,7 +695,7 @@
             }
         },
         {
-            "id": "45",
+            "id": "65",
             "component": "Button",
             "label": "Papas/Queso",
             "props": {
