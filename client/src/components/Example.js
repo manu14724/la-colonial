@@ -24,6 +24,8 @@ class ComponentToPrint extends React.Component {
         <h4>Total de su compra: ${this.props.props.total}</h4>
         <h4>Su cambio: ${this.props.props.cash - this.props.props.total}</h4>
         <Divider style={{ margin: "5px 0" }} />
+        <h5>HELADOS LA COLONIAL</h5>
+        <h5>DIVISION DEL NORTE #117</h5>
         <h3>Gracias por su preferencia :)</h3>
       </div>
     )

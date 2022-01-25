@@ -6,7 +6,7 @@
             "label": "Agua Chica",
             "props": {
                 "text": "Chica",
-                "price": 10,
+                "price": 13,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large"
@@ -18,7 +18,7 @@
             "label": "Agua Grande",
             "props": {
                 "text": "Grande",
-                "price": 15,
+                "price": 18,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large"
@@ -56,7 +56,7 @@
             "label": "Italiana Chica",
             "props": {
                 "text": "Chica",
-                "price": 14,
+                "price": 16,
                 "disabled": false,
                 "variant": "contained",
                 "color": "success",
@@ -69,7 +69,7 @@
             "label": "Italiana Mediana",
             "props": {
                 "text": "Mediana",
-                "price": 19,
+                "price": 21,
                 "disabled": false,
                 "variant": "contained",
                 "color": "success",
@@ -82,7 +82,7 @@
             "label": "Italiana Grande",
             "props": {
                 "text": "Grande",
-                "price": 28,
+                "price": 30,
                 "disabled": false,
                 "variant": "contained",
                 "color": "success",
@@ -94,7 +94,7 @@
         {
             "id": "8",
             "component": "Button",
-            "label": "Paleta Chica",
+            "label": "Paleta de Frutas",
             "props": {
                 "text": "Chica",
                 "price": 6,
@@ -110,7 +110,7 @@
         {
             "id": "9",
             "component": "Button",
-            "label": "Paleta Mediana",
+            "label": "Paleta de Crema",
             "props": {
                 "text": "Mediana",
                 "price": 11,
@@ -126,7 +126,7 @@
         {
             "id": "10",
             "component": "Button",
-            "label": "Paleta Grande",
+            "label": "Paleta Especial",
             "props": {
                 "text": "Grande",
                 "price": 18,
@@ -147,7 +147,7 @@
             "label": "Chasca Chica",
             "props": {
                 "text": "Chica",
-                "price": 16,
+                "price": 18,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -163,7 +163,7 @@
             "label": "Chasca Grande",
             "props": {
                 "text": "Grande",
-                "price": 28,
+                "price": 30,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -195,7 +195,7 @@
             "label": "Chasca Mediana",
             "props": {
                 "text": "Mediana",
-                "price": 22,
+                "price": 24,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -206,12 +206,12 @@
             }
         },
         {
-            "id": "15",
+            "id": "54",
             "component": "Button",
-            "label": "Chasca 1/2 litro",
+            "label": "Chasca 1 Litro",
             "props": {
-                "text": "1/2 Litro",
-                "price": 5,
+                "text": "Chasca 1 Litro",
+                "price": 56,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -229,7 +229,7 @@
             "label": "Frappuccino Chico",
             "props": {
                 "text": "Frappuccino Chico",
-                "price": 25,
+                "price": 27,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -263,12 +263,12 @@
             "label": "Vaso Choco",
             "props": {
                 "text": "Vaso Choco",
-                "price": 20,
+                "price": 22,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -279,12 +279,12 @@
             "label": "Helado Sencillo",
             "props": {
                 "text": "Sencillo",
-                "price": 16,
+                "price": 18,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -295,12 +295,12 @@
             "label": "Helado Bola Extra",
             "props": {
                 "text": "Bola Extra",
-                "price": 12,
+                "price": 14,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -316,7 +316,7 @@
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -327,12 +327,12 @@
             "label": "Helado Doble",
             "props": {
                 "text": "Doble",
-                "price": 22,
+                "price": 24,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -343,12 +343,12 @@
             "label": "Helado 1/2 litro",
             "props": {
                 "text": "1/2 Litro",
-                "price": 29,
+                "price": 32,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -359,12 +359,12 @@
             "label": "Helado 1 litro",
             "props": {
                 "text": "1 Litro",
-                "price": 58,
+                "price": 64,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -375,12 +375,12 @@
             "label": "Helado Triple",
             "props": {
                 "text": "Triple",
-                "price": 28,
+                "price": 30,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -391,12 +391,12 @@
             "label": "Helado 5 Litros",
             "props": {
                 "text": "5 Litros",
-                "price": 150,
+                "price": 160,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
                 "style": {
-                    "background": "pink",
+                    "background": "navy",
                     "marginBottom": "10px"
                 }
             }
@@ -409,7 +409,7 @@
             "label": "Fresas",
             "props": {
                 "text": "Fresas",
-                "price": 21,
+                "price": 15,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -425,7 +425,7 @@
             "label": "Fresas con 1 Helado",
             "props": {
                 "text": "Fresas con 1 helado",
-                "price": 20,
+                "price": 25,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -441,7 +441,7 @@
             "label": "Fresa con 2 helados",
             "props": {
                 "text": "Fresas con 2 holados",
-                "price": 33,
+                "price": 35,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -459,7 +459,7 @@
             "label": "Bolis",
             "props": {
                 "text": "Bolis",
-                "price": 6,
+                "price": 7,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -475,7 +475,7 @@
             "label": "Esquimal Chico",
             "props": {
                 "text": "Esquimal Chico",
-                "price": 11,
+                "price": 12,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -491,7 +491,7 @@
             "label": "Paleta Chamoy",
             "props": {
                 "text": "Paleta Chamoy",
-                "price": 11,
+                "price": 12,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -507,7 +507,7 @@
             "label": "Chemisse",
             "props": {
                 "text": "Chemisse",
-                "price": 11,
+                "price": 12,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -520,10 +520,10 @@
         {
             "id": "34",
             "component": "Button",
-            "label": "Chocolato",
+            "label": "Chocotaco",
             "props": {
                 "text": "Chocotaco",
-                "price": 18,
+                "price": 20,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -539,7 +539,7 @@
             "label": "Sanduich",
             "props": {
                 "text": "Sanduich",
-                "price": 11,
+                "price": 12,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -555,7 +555,7 @@
             "label": "Extra Chantilly",
             "props": {
                 "text": "Extra Chantilly",
-                "price": 10,
+                "price": 12,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -573,7 +573,7 @@
             "label": "Nachos",
             "props": {
                 "text": "Nachos",
-                "price": 20,
+                "price": 25,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -620,7 +620,7 @@
             "label": "Nachos Extra Queso",
             "props": {
                 "text": "Nachos Ext. Queso",
-                "price": 30,
+                "price": 35,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -668,7 +668,7 @@
             "label": "Palomitas",
             "props": {
                 "text": "Palomitas",
-                "price": 12,
+                "price": 15,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -701,6 +701,22 @@
             "props": {
                 "text": "Papas/Queso",
                 "price": 20,
+                "disabled": false,
+                "variant": "contained",
+                "size": "large",
+                "style": {
+                    "background": "darkcyan",
+                    "marginBottom": "10px"
+                }
+            }
+        },
+        {
+            "id": "45",
+            "component": "Button",
+            "label": "Dorinachos",
+            "props": {
+                "text": "Dorinachos",
+                "price": 25,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
