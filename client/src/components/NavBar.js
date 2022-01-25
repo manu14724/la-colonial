@@ -11,7 +11,7 @@ export const NavBar = () => {
               <Link to={"/"}>Ventas</Link>
             </li>
             <li>
-              <Link to={"/reportes"}></Link>
+              <Link to={"/reportes"}>Reportes</Link>
             </li>
             <li>
               <Link to={"/precios"}></Link>

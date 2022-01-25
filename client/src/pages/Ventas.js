@@ -14,6 +14,7 @@ export const Ventas = () => {
   const [stack, setStack] = useState([]);
   const [turno, setTurno] = useState(1);
   const [total, setTotal] = useState(0);
+  const [reporte, setReporte] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [cash, setCash] = useState(0);
 
@@ -21,9 +22,12 @@ export const Ventas = () => {
     setIsLoading(true);
     const response = await fetch('/api/hello');
     const respTurno = await fetch('/api/turno');
+    const respReporte = await fetch('/api/reporte')
     const body = await response.json();
     const bodyTurno = await respTurno.json();
+    const bodyReporte = await respReporte.json();
     setTurno(bodyTurno?.turno || 1);
+    setReporte(bodyReporte || []);
     setIsLoading(false);
     if (response.status !== 200) throw Error(body.message);
 
@@ -44,7 +48,22 @@ export const Ventas = () => {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({ turno: turno + 1 }),
-		});
+    });
+
+    const ticket = {
+      fecha: new Date(),
+      stack,
+      total
+    }
+
+    const r = await fetch('/api/newReporte', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(ticket),
+    });
+    
     setTurno(turno + 1);
     setStack([]);
     setTotal(0);
@@ -73,7 +92,7 @@ export const Ventas = () => {
 
   const handleClick = (item) => {
     const result = stack.filter(i => i.id === item.id);
-    console.log("RESULT: ", result);
+
     if (result?.length) {
       updateCantidad(result[0]);
     } else {

@@ -3,8 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const data = require("./data/data.json");
 const turno = require("./data/turno.json");
-var uuid = require('uuid');
-var fs = require('fs');
+const reporte = require("./data/reporte.json");
+
 const { writeFile } = require('fs');
 
 const app = express();
@@ -20,6 +20,10 @@ app.get('/api/hello', (req, res) => {
 
 app.get('/api/turno', (req, res) => {
   res.send(turno);
+});
+
+app.get('/api/reporte', (req, res) => {
+  res.send(reporte);
 });
 
 app.post('/api/world', (req, res) => {
@@ -41,6 +45,22 @@ app.post('/api/world', (req, res) => {
 app.post('/api/newTurn', (req, res) => {
   console.log(req.body);
   const path = './data/turno.json';
+  const config = req.body;
+
+  writeFile(path, JSON.stringify(config, null, 2), (error) => {
+    if (error) {
+      console.log('An error has occurred ', error);
+      return;
+    }
+    console.log('Data written successfully to disk');
+
+  })
+  res.send(200);
+});
+
+app.post('/api/newReporte', (req, res) => {
+  console.log(req.body);
+  const path = './data/reporte.json';
   const config = req.body;
 
   writeFile(path, JSON.stringify(config, null, 2), (error) => {

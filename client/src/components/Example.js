@@ -5,7 +5,7 @@ import Divider from "@mui/material/Divider";
 class ComponentToPrint extends React.Component {
 
   componentDidMount() {
-    console.log(this.props.props);
+    // console.log(this.props.props);
     // this.props.props.pay();
   }
   
