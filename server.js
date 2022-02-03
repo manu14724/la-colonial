@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const data = require("./data/data.json");
 const turno = require("./data/turno.json");
-const reporte = require("./data/reporte.json");
+const reportes = require("./data/reportes.json");
 
 const { writeFile } = require('fs');
 
@@ -23,7 +23,7 @@ app.get('/api/turno', (req, res) => {
 });
 
 app.get('/api/reporte', (req, res) => {
-  res.send(reporte);
+  res.send(reportes);
 });
 
 app.post('/api/world', (req, res) => {
@@ -60,7 +60,7 @@ app.post('/api/newTurn', (req, res) => {
 
 app.post('/api/newReporte', (req, res) => {
   console.log(req.body);
-  const path = './data/reporte.json';
+  const path = './data/reportes.json';
   const config = req.body;
 
   writeFile(path, JSON.stringify(config, null, 2), (error) => {

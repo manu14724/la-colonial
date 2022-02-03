@@ -1,0 +1,48 @@
+{
+  "reportes": [
+    {
+      "fecha": "2022-02-03T02:55:12.900Z",
+      "stack": [
+        {
+          "id": "54",
+          "component": "Button",
+          "label": "Chasca 1 Litro",
+          "props": {
+            "text": "Chasca 1 Litro",
+            "price": 56,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "purple",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "6d35ac5a-b5d9-4611-b1fc-6b35cc9a7e79",
+          "cantidad": 1
+        }
+      ],
+      "total": 56
+    },
+    {
+      "fecha": "2022-02-03T02:55:41.636Z",
+      "stack": [
+        {
+          "id": "3",
+          "component": "Button",
+          "label": "Canasta o Varquillo",
+          "props": {
+            "text": "Canasta o Varquillo",
+            "price": 2,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large"
+          },
+          "uuid": "a529303d-ba04-43f7-8026-d0068bc8b408",
+          "cantidad": 3
+        }
+      ],
+      "total": 6
+    }
+  ]
+}

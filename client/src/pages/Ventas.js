@@ -30,7 +30,7 @@ export const Ventas = () => {
     setReporte(bodyReporte || []);
     setIsLoading(false);
     if (response.status !== 200) throw Error(body.message);
-
+  
     return body;
   };
 
@@ -56,12 +56,15 @@ export const Ventas = () => {
       total
     }
 
+    const rep = reporte.reportes;
+    rep.push(ticket);
+
     const r = await fetch('/api/newReporte', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
       },
-      body: JSON.stringify(ticket),
+      body: JSON.stringify({ reportes: rep }),
     });
     
     setTurno(turno + 1);
