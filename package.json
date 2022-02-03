@@ -37,5 +37,8 @@
     "node",
     "express",
     "create-react-app"
-  ]
+  ],
+  "engines": {
+    "node": "14.15.0"
+  }
 }
