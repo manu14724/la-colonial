@@ -42,12 +42,13 @@ export const Ventas = () => {
   };
 
   const pay = async () => {
+    const turn = turno < 100 ? turno + 1 : 1;
     const response = await fetch('/api/newTurn', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ turno: turno + 1 }),
+			body: JSON.stringify({ turno: turn }),
     });
 
     const ticket = {
@@ -67,7 +68,7 @@ export const Ventas = () => {
       body: JSON.stringify({ reportes: rep }),
     });
     
-    setTurno(turno + 1);
+    setTurno(turn);
     setStack([]);
     setTotal(0);
     setCash(0);

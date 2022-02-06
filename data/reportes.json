@@ -43,6 +43,198 @@
         }
       ],
       "total": 6
+    },
+    {
+      "fecha": "2022-02-06T01:47:26.021Z",
+      "stack": [
+        {
+          "id": "43",
+          "component": "Button",
+          "label": "Palomitas",
+          "props": {
+            "text": "Palomitas",
+            "price": 15,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "darkcyan",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "8c84a2c9-d456-412f-89e6-71c9e2115654",
+          "cantidad": 1
+        }
+      ],
+      "total": 15
+    },
+    {
+      "fecha": "2022-02-06T01:47:32.836Z",
+      "stack": [
+        {
+          "id": "32",
+          "component": "Button",
+          "label": "Paleta Chamoy",
+          "props": {
+            "text": "Paleta Chamoy",
+            "price": 12,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "gray",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "21888b2c-ef6f-4452-b440-332f9883bd3d",
+          "cantidad": 1
+        }
+      ],
+      "total": 12
+    },
+    {
+      "fecha": "2022-02-06T01:47:44.658Z",
+      "stack": [
+        {
+          "id": "32",
+          "component": "Button",
+          "label": "Paleta Chamoy",
+          "props": {
+            "text": "Paleta Chamoy",
+            "price": 12,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "gray",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "5ebda715-6574-46b2-8768-d3c84295dbf7",
+          "cantidad": 2
+        }
+      ],
+      "total": 24
+    },
+    {
+      "fecha": "2022-02-06T01:48:38.601Z",
+      "stack": [
+        {
+          "id": "54",
+          "component": "Button",
+          "label": "Chasca 1 Litro",
+          "props": {
+            "text": "Chasca 1 Litro",
+            "price": 56,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "purple",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "69997359-af29-4fa5-bc07-093e92bb82ae",
+          "cantidad": 2
+        }
+      ],
+      "total": 112
+    },
+    {
+      "fecha": "2022-02-06T01:48:45.136Z",
+      "stack": [
+        {
+          "id": "20",
+          "component": "Button",
+          "label": "Helado Bola Extra",
+          "props": {
+            "text": "Bola Extra",
+            "price": 14,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "navy",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "66027965-35d5-42ce-ba19-12fba9358dac",
+          "cantidad": 2
+        }
+      ],
+      "total": 28
+    },
+    {
+      "fecha": "2022-02-06T01:49:02.804Z",
+      "stack": [
+        {
+          "id": "26",
+          "component": "Button",
+          "label": "Helado 5 Litros",
+          "props": {
+            "text": "5 Litros",
+            "price": 160,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "navy",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "6d5fec26-3ea9-483d-bbc4-ed4e32fae426",
+          "cantidad": 1
+        }
+      ],
+      "total": 160
+    },
+    {
+      "fecha": "2022-02-06T01:51:10.802Z",
+      "stack": [
+        {
+          "id": "10",
+          "component": "Button",
+          "label": "Paleta Especial",
+          "props": {
+            "text": "Grande",
+            "price": 20,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "orange",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "88e17969-f797-42ff-a69d-2719f76471d6",
+          "cantidad": 2
+        }
+      ],
+      "total": 40
+    },
+    {
+      "fecha": "2022-02-06T01:51:29.628Z",
+      "stack": [
+        {
+          "id": "54",
+          "component": "Button",
+          "label": "Chasca 1 Litro",
+          "props": {
+            "text": "Chasca 1 Litro",
+            "price": 56,
+            "disabled": false,
+            "variant": "contained",
+            "size": "large",
+            "style": {
+              "background": "purple",
+              "marginBottom": "10px"
+            }
+          },
+          "uuid": "a0a740ca-f4b5-413c-9843-799dfaf50e4a",
+          "cantidad": 3
+        }
+      ],
+      "total": 168
     }
   ]
 }

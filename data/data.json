@@ -113,7 +113,7 @@
             "label": "Paleta de Crema",
             "props": {
                 "text": "Mediana",
-                "price": 11,
+                "price": 12,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",
@@ -129,7 +129,7 @@
             "label": "Paleta Especial",
             "props": {
                 "text": "Grande",
-                "price": 18,
+                "price": 20,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",

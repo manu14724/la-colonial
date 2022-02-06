@@ -13,7 +13,7 @@ class ComponentToPrint extends React.Component {
   render() {
     return (
       <div className='print-source'>
-        <center><h1>La Colonial</h1></center>
+        <center><h1>La Colonial - Turno {this.props.props.turno}</h1></center>
         {this.props.props.stack.map(item => (
           <div key={item.uuid}>
             <h4 style={{ margin: 0 }}>{item.cantidad + " - " + item.label + " $" + (item.props.price * item.cantidad)}</h4>
