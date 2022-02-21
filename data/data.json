@@ -97,7 +97,7 @@
             "label": "Paleta de Frutas",
             "props": {
                 "text": "Chica",
-                "price": 6,
+                "price": 7,
                 "disabled": false,
                 "variant": "contained",
                 "size": "large",

@@ -46,13 +46,7 @@ export const Reportes = () => {
           <div key={index} style={{ marginBottom: 20 }}>
             <span style={{ marginRight: 30 }}>{format(new Date(item.fecha), 'd/M/yyyy')}</span>
             <span>Total Ticket: <b>${item.total}</b></span>
-            {item?.stack?.map((item, index) => (
-              <div key={index}>
-                <span style={{ marginRight: 30, marginLeft: 50 }}>{item.label}</span>
-                <span style={{ marginRight: 30 }}>Cantidad: {item.cantidad}</span>
-                <span>Total: ${item.props.price * item.cantidad}</span>
-              </div>
-            ))}
+            <p style={{ marginRight: 30 }}>{item.stack}</p>
             <Divider style={{ margin: "5px 0" }} />
           </div>
         ))}
