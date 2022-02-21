@@ -37,7 +37,7 @@ class Example extends React.Component {
     return (
       <div style={{ display: "inline-block" }}>    
         <ReactToPrint
-          trigger={() => !!this.props.cash ? (
+          trigger={() => !!this.props.cash && this.props.cash >= this.props.total && this.props.cash > 0 ? (
             <a
               href="#"
               style={{ fontSize: 35 }}
