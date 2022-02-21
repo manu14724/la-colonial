@@ -9,6 +9,7 @@ const { writeFile } = require('fs');
 
 const app = express();
 const port = process.env.PORT || 5000;
+app.disable('etag');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -61,6 +62,23 @@ app.post('/api/newTurn', (req, res) => {
 app.post('/api/newReporte', (req, res) => {
   console.log(req.body);
   const path = './data/reportes.json';
+  const config = req.body;
+  console.log(config);
+
+  writeFile(path, JSON.stringify(config, null, 2), (error) => {
+    if (error) {
+      console.log('An error has occurred ', error);
+      return;
+    }
+    console.log('Data written successfully to disk');
+
+  })
+  res.send(200);
+});
+
+app.post('/api/updatePrices', (req, res) => {
+  console.log(req.body);
+  const path = './data/data.json';
   const config = req.body;
 
   writeFile(path, JSON.stringify(config, null, 2), (error) => {

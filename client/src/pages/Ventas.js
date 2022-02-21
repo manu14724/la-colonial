@@ -14,7 +14,7 @@ export const Ventas = () => {
   const [stack, setStack] = useState([]);
   const [turno, setTurno] = useState(1);
   const [total, setTotal] = useState(0);
-  const [reporte, setReporte] = useState(null);
+  const [reporte, setReporte] = useState({ reportes: [] });
   const [isLoading, setIsLoading] = useState(false);
   const [cash, setCash] = useState(0);
 
@@ -27,7 +27,7 @@ export const Ventas = () => {
     const bodyTurno = await respTurno.json();
     const bodyReporte = await respReporte.json();
     setTurno(bodyTurno?.turno || 1);
-    setReporte(bodyReporte || []);
+    setReporte(bodyReporte);
     setIsLoading(false);
     if (response.status !== 200) throw Error(body.message);
   
@@ -60,21 +60,26 @@ export const Ventas = () => {
     });
 
     const ticket = {
-      fecha: new Date(),
+      fecha: new Date().toISOString(),
       stack: getReporte(),
       total
     }
 
     const rep = reporte.reportes;
     rep.push(ticket);
+    console.log(reporte);
 
-    const r = await fetch('/api/newReporte', {
+    try {
+      const r = await fetch('/api/newReporte', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
       },
       body: JSON.stringify({ reportes: rep }),
     });
+    } catch (e) {
+      console.log(e);
+    }
     
     setTurno(turn);
     setStack([]);

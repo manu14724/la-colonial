@@ -1,24 +1,3 @@
 {
-  "reportes": [
-    {
-      "fecha": "2022-02-21T16:22:24.830Z",
-      "stack": "3: Italiana Mediana | 1: Frappuccino Chico | ",
-      "total": 90
-    },
-    {
-      "fecha": "2022-02-21T16:22:43.571Z",
-      "stack": "4: Sanduich | 1: Cueritos | 1: Papas/Queso | ",
-      "total": 88
-    },
-    {
-      "fecha": "2022-02-21T16:23:18.795Z",
-      "stack": "2: Agua Natural Grande | 1: Extra Chantilly | 1: Paleta Chamoy | 2: Fresas con 1 Helado | ",
-      "total": 114
-    },
-    {
-      "fecha": "2022-02-21T16:25:20.379Z",
-      "stack": "3: Helado Sencillo | ",
-      "total": 54
-    }
-  ]
+  "reportes": []
 }

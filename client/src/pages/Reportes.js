@@ -9,13 +9,14 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export const Reportes = () => {
   const [startDate, setStartDate] = useState(new Date());
-  const [reportes, setReportes] = useState([]);
+  const [reporte, setReporte] = useState({ reportes: [] });
   const [pass, setPass] = useState("");
 
   const callApi = async () => {
     const respReporte = await fetch('/api/reporte');
     const bodyReporte = await respReporte.json();
-    setReportes(bodyReporte || []);
+    console.log(bodyReporte);
+    setReporte(bodyReporte);
   } 
 
   useEffect(() => {
@@ -24,7 +25,7 @@ export const Reportes = () => {
 
   const getTotal = () => {
     let total = 0;
-    reportes?.reportes?.forEach(item => total = total + item.total);
+    reporte?.reportes?.forEach(item => total = total + item.total);
     return total;
   }
 
@@ -42,7 +43,7 @@ export const Reportes = () => {
       {isValid && <h3>Venta Total: ${getTotal()}</h3>}
       {isValid ?
       <div style={{ marginTop: 30 }}>
-        {reportes.reportes?.map((item, index) => (
+        {reporte.reportes?.map((item, index) => (
           <div key={index} style={{ marginBottom: 20 }}>
             <span style={{ marginRight: 30 }}>{format(new Date(item.fecha), 'd/M/yyyy')}</span>
             <span>Total Ticket: <b>${item.total}</b></span>
