@@ -40,7 +40,7 @@ app.post('/api/world', (req, res) => {
     console.log('Data written successfully to disk');
 
   })
-  res.send(200);
+  res.sendStatus(200);
 });
 
 app.post('/api/newTurn', (req, res) => {
@@ -56,14 +56,13 @@ app.post('/api/newTurn', (req, res) => {
     console.log('Data written successfully to disk');
 
   })
-  res.send(200);
+  res.sendStatus(200);
 });
 
 app.post('/api/newReporte', (req, res) => {
   console.log(req.body);
   const path = './data/reportes.json';
   const config = req.body;
-  console.log(config);
 
   writeFile(path, JSON.stringify(config, null, 2), (error) => {
     if (error) {
@@ -73,7 +72,7 @@ app.post('/api/newReporte', (req, res) => {
     console.log('Data written successfully to disk');
 
   })
-  res.send(200);
+  res.sendStatus(200);
 });
 
 app.post('/api/updatePrices', (req, res) => {
@@ -89,7 +88,7 @@ app.post('/api/updatePrices', (req, res) => {
     console.log('Data written successfully to disk');
 
   })
-  res.send(200);
+  res.sendStatus(200);
 });
 
 if (process.env.NODE_ENV === 'production') {
