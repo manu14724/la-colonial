@@ -1,3 +1,34 @@
 {
-  "reportes": []
+  "reportes": [
+    {
+      "fecha": "23/2/2022",
+      "stack": "3: Italiana Mediana | ",
+      "total": 63
+    },
+    {
+      "fecha": "23/2/2022",
+      "stack": "3: Helado 1 litro | ",
+      "total": 192
+    },
+    {
+      "fecha": "23/2/2022",
+      "stack": "3: Paleta de Frutas | ",
+      "total": 21
+    },
+    {
+      "fecha": "24/2/2022",
+      "stack": "2: Chasca Chica | ",
+      "total": 36
+    },
+    {
+      "fecha": "24/2/2022",
+      "stack": "3: Paleta de Frutas | ",
+      "total": 21
+    },
+    {
+      "fecha": "24/2/2022",
+      "stack": "3: Chasca Mediana | ",
+      "total": 72
+    }
+  ]
 }

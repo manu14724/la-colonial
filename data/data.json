@@ -6,7 +6,7 @@
       "label": "Agua Chica",
       "props": {
         "text": "Chica",
-        "price": 14,
+        "price": 13,
         "disabled": false,
         "variant": "contained",
         "size": "large"

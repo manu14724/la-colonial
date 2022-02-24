@@ -43,20 +43,19 @@ export const Precios = () => {
     }
 
     const guardarPrecios = async () => {
-        console.log(dta);
-        const r = await fetch('/api/updatePrices', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ ...dta }),
-    });
+      const r = await fetch('/api/updatePrices', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...dta }),
+      });
     }
 
   return isLoading ? <div>Cargando...</div> : (
       <div className="ventas-wrapper">
-          {!isValid && <input placeholder="Contraseña" type="password" value={pass} onChange={onChangePass} />}
-      <input style={{ marginLeft: 5 }} type="button" value={"Salir"} onClick={() => setPass("")} />
+          {!isValid && <input style={{ height: 30 }} placeholder="Contraseña" type="password" value={pass} onChange={onChangePass} />}
+      <input style={{ marginLeft: 5, height: 30 }} type="button" value={"Salir"} onClick={() => setPass("")} />
           {isValid ? (
           <Grid container spacing={2}>
         <Grid item xs={7} style={{ paddingRight: "15px" }}>

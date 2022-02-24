@@ -46,6 +46,7 @@ class Example extends React.Component {
             </a>
           ) : <span>Ingrese Pago</span>}
           onAfterPrint={() => this.props.pay()}
+          onBeforePrint={() => this.props.newReport()}
           content={() => this.componentRef}
         />
         <ComponentToPrint props={this.props} ref={el => (this.componentRef = el)} />

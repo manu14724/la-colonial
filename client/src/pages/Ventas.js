@@ -58,33 +58,30 @@ export const Ventas = () => {
 			},
 			body: JSON.stringify({ turno: turn }),
     });
+    
+    setTurno(turn);
+    setStack([]);
+    setTotal(0);
+    setCash(0);
+  }
 
+  const newReport = async () => {
     const ticket = {
-      fecha: new Date().toISOString(),
+      fecha: format(new Date(), 'd/M/yyyy'),
       stack: getReporte(),
       total
     }
 
     const rep = reporte.reportes;
     rep.push(ticket);
-    console.log(reporte);
 
-    try {
-      const r = await fetch('/api/newReporte', {
+    const r = await fetch('/api/newReporte', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
       },
       body: JSON.stringify({ reportes: rep }),
     });
-    } catch (e) {
-      console.log(e);
-    }
-    
-    setTurno(turn);
-    setStack([]);
-    setTotal(0);
-    setCash(0);
   }
 
   useEffect(() => {
@@ -173,6 +170,7 @@ export const Ventas = () => {
             pay={pay}
             handleRemoveStack={handleRemoveStack}
             updateCantidad={updateCantidad}
+            newReport={newReport}
             total={total} />
         </Grid>
       </Grid>
