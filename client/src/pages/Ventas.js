@@ -41,14 +41,6 @@ export const Ventas = () => {
     setCash(total);
   };
 
-  const getReporte = () => {
-    let venta = "";
-    stack.forEach(item => {
-      venta = venta + item.cantidad + ": " + item.label + " | ";
-    });
-    return venta;
-  };
-
   const pay = async () => {
     const turn = turno < 100 ? turno + 1 : 1;
     const response = await fetch('/api/newTurn', {
@@ -68,7 +60,6 @@ export const Ventas = () => {
   const newReport = async () => {
     const ticket = {
       fecha: format(new Date(), 'd/M/yyyy'),
-      stack: getReporte(),
       total
     }
 

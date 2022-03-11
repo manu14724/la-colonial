@@ -16,7 +16,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // API calls
 app.get('/api/hello', (req, res) => {
-  res.send(data);
+  try {
+    res.send(data);
+  } catch (e) {
+    console.log(e)
+  }
 });
 
 app.get('/api/turno', (req, res) => {
@@ -28,7 +32,8 @@ app.get('/api/reporte', (req, res) => {
 });
 
 app.post('/api/world', (req, res) => {
-  console.log(req.body);
+  try {
+console.log(req.body);
   const path = './data/turno.json';
   const config = { turno: 0 };
 
@@ -41,10 +46,15 @@ app.post('/api/world', (req, res) => {
 
   })
   res.sendStatus(200);
+  } catch (e) {
+    console.log(e)
+  }
+  
 });
 
 app.post('/api/newTurn', (req, res) => {
-  console.log(req.body);
+  try {
+console.log(req.body);
   const path = './data/turno.json';
   const config = req.body;
 
@@ -57,10 +67,15 @@ app.post('/api/newTurn', (req, res) => {
 
   })
   res.sendStatus(200);
+  } catch (e) {
+    console.log(e)
+  }
+  
 });
 
 app.post('/api/newReporte', (req, res) => {
-  console.log(req.body);
+  try {
+console.log(req.body);
   const path = './data/reportes.json';
   const config = req.body;
 
@@ -73,10 +88,15 @@ app.post('/api/newReporte', (req, res) => {
 
   })
   res.sendStatus(200);
+  } catch (e) {
+    console.log(e)
+  }
+  
 });
 
 app.post('/api/updatePrices', (req, res) => {
-  console.log(req.body);
+  try {
+console.log(req.body);
   const path = './data/data.json';
   const config = req.body;
 
@@ -89,6 +109,10 @@ app.post('/api/updatePrices', (req, res) => {
 
   })
   res.sendStatus(200);
+  } catch (e) {
+    console.log(e)
+  }
+  
 });
 
 if (process.env.NODE_ENV === 'production') {

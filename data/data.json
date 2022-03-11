@@ -42,7 +42,7 @@
       "label": "Extra",
       "props": {
         "text": "Extra",
-        "price": 3,
+        "price": 4,
         "disabled": false,
         "variant": "contained",
         "size": "large"

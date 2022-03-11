@@ -23,6 +23,16 @@ export const Reportes = () => {
     return reps;
   }
 
+    const limpiarReporte = async () => {
+    const r = await fetch('/api/newReporte', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ reportes: [] }),
+    });
+  }
+
   const callApi = async () => {
     const respReporte = await fetch('/api/reporte');
     const bodyReporte = await respReporte.json();
@@ -61,6 +71,7 @@ export const Reportes = () => {
       {isValid && <h3>Venta Total: ${getTotal()}</h3>}
       {isValid ?
         <div style={{ marginTop: 10, marginBottom: 20 }}>
+          {/*<button onClick={limpiarReporte}>Limpiar reporte en caso de falla</button>*/}
           <DatePicker style={{ marginBottom: 20 }} selected={startDate} onChange={(date) => handleChangeDate(date)} />
         {tempReport.reportes?.map((item, index) => (
           <div key={index} style={{ margin: 20 }}>
