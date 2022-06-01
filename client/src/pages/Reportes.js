@@ -31,6 +31,7 @@ export const Reportes = () => {
       },
       body: JSON.stringify({ reportes: [] }),
     });
+      setTempReport({ reportes: [] });
   }
 
   const callApi = async () => {
@@ -62,22 +63,28 @@ export const Reportes = () => {
     setPass(target.value)
   }
 
-  const isValid = pass === "colonial12345";
+  const isValid = pass === "";
 
   return (
     <div style={{ margin: "50px 200px" }}>
       {!isValid && <input placeholder="Contraseña" type="password" value={pass} onChange={onChange} />}
       <input style={{ marginLeft: 5 }} type="button" value={"Salir"} onClick={() => setPass("")} />
-      {isValid && <h3>Venta Total: ${getTotal()}</h3>}
+      <button style={{ margin: "20px 30px", background: "red", color: "white" }} onClick={limpiarReporte}>Borrar reporte</button>
+      {isValid && (
+        <div>
+          <h3>Venta Total: ${getTotal().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h3>
+          <h3>Total de tickets emitidos: {tempReport?.reportes?.length}</h3>
+        </div>
+      )}
       {isValid ?
         <div style={{ marginTop: 10, marginBottom: 20 }}>
-          {/*<button onClick={limpiarReporte}>Limpiar reporte en caso de falla</button>*/}
           <DatePicker style={{ marginBottom: 20 }} selected={startDate} onChange={(date) => handleChangeDate(date)} />
         {tempReport.reportes?.map((item, index) => (
           <div key={index} style={{ margin: 20 }}>
-            <span style={{ marginRight: 30 }}>{item.fecha}</span>
             <span>Total Ticket: <b>${item.total}</b></span>
-            <p style={{ marginRight: 30 }}>{item.stack}</p>
+            <span style={{ margin: "0 10px" }}>-</span>
+            <span style={{ marginRight: 30, fontWeight: 400 }}><b>Hora de venta: </b>{item.fechaInfo || item.fecha}</span>
+            <span style={{ marginRight: 30, fontWeight: 400 }}><b>Turno: </b>{item.turno || null}</span>
             <Divider style={{ margin: "5px 0" }} />
           </div>
         ))}

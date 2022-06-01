@@ -58,9 +58,14 @@ export const Ventas = () => {
   }
 
   const newReport = async () => {
+    const fechaInfo = format(new Date(), 'd/M/yyyy h:mm aaaa');
+    const fecha = format(new Date(), 'd/M/yyyy');
+    console.log(new Date().getTime());
     const ticket = {
-      fecha: format(new Date(), 'd/M/yyyy'),
-      total
+      fecha,
+      total,
+      fechaInfo,
+      turno,
     }
 
     const rep = reporte.reportes;
