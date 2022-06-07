@@ -63,7 +63,7 @@ export const Reportes = () => {
     setPass(target.value)
   }
 
-  const isValid = pass === "";
+  const isValid = pass === "colonial12345";
 
   return (
     <div style={{ margin: "50px 200px" }}>

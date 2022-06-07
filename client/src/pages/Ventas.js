@@ -60,7 +60,7 @@ export const Ventas = () => {
   const newReport = async () => {
     const fechaInfo = format(new Date(), 'd/M/yyyy h:mm aaaa');
     const fecha = format(new Date(), 'd/M/yyyy');
-    console.log(new Date().getTime());
+
     const ticket = {
       fecha,
       total,
@@ -69,15 +69,18 @@ export const Ventas = () => {
     }
 
     const rep = reporte.reportes;
-    rep.push(ticket);
+    const found = rep.filter(item => item.fechaInfo === fechaInfo);
 
-    const r = await fetch('/api/newReporte', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ reportes: rep }),
-    });
+    if (found?.length === 0) {
+      rep.push(ticket);
+      const r = await fetch('/api/newReporte', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ reportes: rep }),
+      });
+    }
   }
 
   useEffect(() => {
